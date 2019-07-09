@@ -1,9 +1,8 @@
-package chapter4.part4.web;
+package chapter4.part9.web;
 
-import chapter4.part4.web.config.CourtRestConfiguration;
+import chapter4.part9.web.config.CourtRestConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-/*
 public class CourtRestApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
@@ -21,4 +20,3 @@ public class CourtRestApplicationInitializer extends AbstractAnnotationConfigDis
 		return new String[] { "/" };
 	}
 }
-*/
