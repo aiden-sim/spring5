@@ -6,5 +6,5 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-    <context:component-scan base-package="chapter2.part3_6.sequence"/>
+    <context:component-scan base-package="chapter2.part5_1"/>
 </beans> 
