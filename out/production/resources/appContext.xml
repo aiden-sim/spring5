@@ -13,6 +13,7 @@
 
     <bean id="sequenceGenerator"
           class="chapter2.part9_2.shop.SequenceGenerator">
+        <property name="suffix" value="A"/>
         <property name="initial" value="1000000"/>
         <property name="prefixGenerator" ref="datePrefixGenerator"/>
     </bean>
