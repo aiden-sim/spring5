@@ -1,10 +1,13 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 
     <bean id="datePrefixGenerator"
           class="chapter2.part9_2.shop.DatePrefixGenerator">
@@ -17,5 +20,6 @@
         <property name="initial" value="1000000"/>
         <property name="prefixGenerator" ref="datePrefixGenerator"/>
     </bean>
-    <context:component-scan base-package="chapter2.part9_2"/>
-</beans> 
+    <aop:aspectj-autoproxy/>
+    <context:component-scan base-package="chapter2.part17_1"/>
+</beans>
