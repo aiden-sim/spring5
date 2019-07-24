@@ -22,24 +22,25 @@ public class CalculatorLoggingAspect {
 
     private Log log = LogFactory.getLog(this.getClass());
 
-    @Pointcut("execution(* *.*(..))")
+    // 커스텀 애노테이션 사용 시, 있으면 영향 줄 수 있다.
+/*    @Pointcut("execution(* *.*(..))")
     private void loggingOperation() {
-    }
+    }*/
 
-    @Before("CalculatorLoggingAspect.loggingOperation()")
+    @Before("CalculatorPointcuts.loggingOperation()")
     public void logBefore(JoinPoint joinPoint) {
         log.info("The method " + joinPoint.getSignature().getName()
                 + "() begins with " + Arrays.toString(joinPoint.getArgs()));
     }
 
-    @After("CalculatorLoggingAspect.loggingOperation()")
+    @After("CalculatorPointcuts.loggingOperation()")
     public void logAfter(JoinPoint joinPoint) {
         log.info("The method " + joinPoint.getSignature().getName()
                 + "() ends");
     }
 
     @AfterReturning(
-            pointcut = "CalculatorLoggingAspect.loggingOperation()",
+            pointcut = "CalculatorPointcuts.loggingOperation()",
             returning = "result")
     public void logAfterReturning(JoinPoint joinPoint, Object result) {
         log.info("The method " + joinPoint.getSignature().getName()
@@ -47,14 +48,14 @@ public class CalculatorLoggingAspect {
     }
 
     @AfterThrowing(
-            pointcut = "CalculatorLoggingAspect.loggingOperation()",
+            pointcut = "CalculatorPointcuts.loggingOperation()",
             throwing = "e")
     public void logAfterThrowing(JoinPoint joinPoint, IllegalArgumentException e) {
         log.error("Illegal argument " + Arrays.toString(joinPoint.getArgs())
                 + " in " + joinPoint.getSignature().getName() + "()");
     }
 
-    @Around("CalculatorLoggingAspect.loggingOperation()")
+    @Around("CalculatorPointcuts.loggingOperation()")
     public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
         log.info("The method " + joinPoint.getSignature().getName()
                 + "() begins with " + Arrays.toString(joinPoint.getArgs()));

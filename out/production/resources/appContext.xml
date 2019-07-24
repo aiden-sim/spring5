@@ -20,6 +20,7 @@
         <property name="initial" value="1000000"/>
         <property name="prefixGenerator" ref="datePrefixGenerator"/>
     </bean>
+
     <aop:aspectj-autoproxy/>
-    <context:component-scan base-package="chapter2.part17_1"/>
+    <context:component-scan base-package="chapter2.part17_3"/>
 </beans>

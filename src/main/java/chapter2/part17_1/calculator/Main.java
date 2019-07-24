@@ -1,14 +1,13 @@
 package chapter2.part17_1.calculator;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
 
 	public static void main(String[] args) {
-
 		ApplicationContext context =
-				new GenericXmlApplicationContext("appContext.xml");
+				new AnnotationConfigApplicationContext(CalculatorConfiguration.class);
 
 		ArithmeticCalculator arithmeticCalculator =
 				(ArithmeticCalculator) context.getBean("arithmeticCalculator");
