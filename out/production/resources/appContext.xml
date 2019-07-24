@@ -22,5 +22,6 @@
     </bean>
 
     <aop:aspectj-autoproxy/>
-    <context:component-scan base-package="chapter2.part17_3"/>
+    <context:load-time-weaver/>
+    <context:component-scan base-package="chapter2.part22_1"/>
 </beans>
