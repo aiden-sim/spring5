@@ -10,8 +10,11 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 import java.util.Set;
 
+/*
 public class CourtServletContainerInitializer implements ServletContainerInitializer {
 	@Override public void onStartup(Set<Class<?>> c, ServletContext ctx) throws ServletException {
+		System.out.println("onStartup");
+
 		AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
 		applicationContext.register(CourtConfiguration.class);
 
@@ -22,3 +25,4 @@ public class CourtServletContainerInitializer implements ServletContainerInitial
 		courtRegistration.addMapping("/");
 	}
 }
+*/
