@@ -25,6 +25,7 @@ dependencies {
     compile "org.springframework:spring-webmvc:${springVersion}"
     compile "org.springframework:spring-oxm:${springVersion}"
     compile "org.springframework:spring-aspects:${springVersion}"
+    compile "javax.servlet:javax.servlet-api:4.0.0"
     compile "org.aspectj:aspectjrt:1.8.13"
     compile "org.aspectj:aspectjweaver:1.8.13"
     compile "com.fasterxml.jackson.core:jackson-databind:2.9.3"
