@@ -1,8 +1,7 @@
 package chapter3.part3_1.web;
 
-import chapter3.part3_1.config.CourtConfiguration;
+/*import chapter3.part3_1.config.CourtConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
 public class CourtWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
@@ -19,4 +18,4 @@ public class CourtWebApplicationInitializer extends AbstractAnnotationConfigDisp
 	protected String[] getServletMappings() {
 		return new String[] { "/" };
 	}
-}
+}*/
